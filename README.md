@@ -1,4 +1,4 @@
-#Tic-Tac-Toe Game
+# Tic-Tac-Toe Game
 This is a simple implementation of the popular game Tic-Tac-Toe using Java and Swing.
 
 ### How to Play
