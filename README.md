@@ -14,7 +14,4 @@ This is a simple implementation of the popular game Tic-Tac-Toe using Java and S
 - Disables buttons once the game has ended to prevent further moves.
 
 ### Technical Details
-The game is implemented in Java using the Swing library for the graphical user interface. 
-The game logic is handled in the TicTacToe class, which implements the ActionListener interface to handle button clicks. 
-The game board is represented as an array of JButton objects, and the winning combinations are checked using a two-dimensional array of indices. 
-Once the game ends, the buttons are disabled to prevent further moves.
+The game is implemented in Java using the Swing library for the graphical user interface. The game logic is handled in the TicTacToe class, which implements the ActionListener interface to handle button clicks. The game board is represented as an array of JButton objects, and the winning combinations are checked using a two-dimensional array of indices. Once the game ends, the buttons are disabled to prevent further moves.
