@@ -28,14 +28,11 @@ import lombok.SneakyThrows;
  * checking for wins or draws, and updating the UI.
  */
 public class TicTacToeGui implements ActionListener {
-  JFrame frame = new JFrame("Game");
-  JPanel titlePanel = new JPanel();
-  JPanel buttonPanel = new JPanel();
-  JLabel textField = new JLabel("Tic-Tac-Toe");
-  JButton[] buttons = new JButton[9];
+  private final JLabel textField = new JLabel("Tic-Tac-Toe");
+  private final JButton[] buttons = new JButton[9];
 
-  boolean playerTurn;
-  int[][] combinations = {
+  private boolean playerTurn;
+  private final int[][] combinations = {
     {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {0, 3, 6},
     {1, 4, 7}, {2, 5, 8}, {0, 4, 8}, {2, 4, 6}
   };
@@ -46,6 +43,7 @@ public class TicTacToeGui implements ActionListener {
    * <p>Sets up the game board, UI components, and starts the first turn.
    */
   public TicTacToeGui() {
+    JFrame frame = new JFrame("Game");
     frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     frame.setSize(500, 500);
     frame.getContentPane().setBackground(new Color(50, 50, 50));
@@ -60,10 +58,12 @@ public class TicTacToeGui implements ActionListener {
     textField.setHorizontalAlignment(CENTER);
     textField.setOpaque(true);
 
+    JPanel titlePanel = new JPanel();
     titlePanel.setLayout(new BorderLayout());
     titlePanel.add(textField);
     titlePanel.setBounds(0, 0, 500, 100);
 
+    JPanel buttonPanel = new JPanel();
     buttonPanel.setLayout(new GridLayout(3, 3));
 
     for (int i = 0; i < 9; i++) {
